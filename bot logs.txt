@@ -1,0 +1,101 @@
+C:\Users\Aditya Rayer\Desktop\AdiNewsBot>heroku logs --tail
+2020-07-20T06:49:47.466591+00:00 app[web.1]: During handling of the above exception, another exception occurred:
+2020-07-20T06:49:47.466591+00:00 app[web.1]:
+2020-07-20T06:49:47.466595+00:00 app[web.1]: Traceback (most recent call last):
+2020-07-20T06:49:47.466650+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.8/logging/__init__.py", line 1081, in emit
+2020-07-20T06:49:47.466650+00:00 app[web.1]: msg = self.format(record)
+2020-07-20T06:49:47.466654+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.8/logging/__init__.py", line 925, in format
+2020-07-20T06:49:47.466654+00:00 app[web.1]: return fmt.format(record)
+2020-07-20T06:49:47.466679+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.8/logging/__init__.py", line 667, in format
+2020-07-20T06:49:47.466680+00:00 app[web.1]: s = self.formatMessage(record)
+2020-07-20T06:49:47.466683+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.8/logging/__init__.py", line 636, in formatMessage
+2020-07-20T06:49:47.466684+00:00 app[web.1]: return self._style.format(record)
+2020-07-20T06:49:47.466709+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.8/logging/__init__.py", line 438, in format
+2020-07-20T06:49:47.466710+00:00 app[web.1]: raise ValueError('Formatting field not found in record: %s' % e)
+2020-07-20T06:49:47.466743+00:00 app[web.1]: ValueError: Formatting field not found in record: 'leveltime'
+2020-07-20T06:49:47.466769+00:00 app[web.1]: Call stack:
+2020-07-20T06:49:47.467988+00:00 app[web.1]: File "app.py", line 76, in <module>
+2020-07-20T06:49:47.467989+00:00 app[web.1]: app.run(port=8443)
+2020-07-20T06:49:47.467994+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.8/site-packages/flask/app.py", line 990, in run
+2020-07-20T06:49:47.467995+00:00 app[web.1]: run_simple(host, port, self, **options)
+2020-07-20T06:49:47.467995+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.8/site-packages/werkzeug/serving.py", line 1052, in run_simple
+2020-07-20T06:49:47.467996+00:00 app[web.1]: inner()
+2020-07-20T06:49:47.468022+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.8/site-packages/werkzeug/serving.py", line 1008, in inner
+2020-07-20T06:49:47.468023+00:00 app[web.1]: log_startup(srv.socket)
+2020-07-20T06:49:47.468157+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.8/site-packages/werkzeug/serving.py", line 982, in log_startup
+2020-07-20T06:49:47.468158+00:00 app[web.1]: _log(
+2020-07-20T06:49:47.468162+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.8/site-packages/werkzeug/_internal.py", line 113, in _log
+2020-07-20T06:49:47.468163+00:00 app[web.1]: getattr(_logger, type)(message.rstrip(), *args, **kwargs)
+2020-07-20T06:49:47.468203+00:00 app[web.1]: Message: ' * Running on %s://%s:%d/ %s'
+2020-07-20T06:49:47.468204+00:00 app[web.1]: Arguments: ('http', '127.0.0.1', 8443, '(Press CTRL+C to quit)')
+2020-07-20T06:50:40.701073+00:00 heroku[web.1]: Error R10 (Boot timeout) -> Web process failed to bind to $PORT within 60 seconds of launch
+2020-07-20T06:50:40.720570+00:00 heroku[web.1]: Stopping process with SIGKILL
+2020-07-20T06:50:40.790965+00:00 heroku[web.1]: Process exited with status 137
+2020-07-20T06:50:40.837980+00:00 heroku[web.1]: State changed from starting to crashed
+2020-07-20T06:50:40.840129+00:00 heroku[web.1]: State changed from crashed to starting
+2020-07-20T06:50:44.913959+00:00 heroku[web.1]: Starting process with command `python3 app.py`
+2020-07-20T06:50:49.695748+00:00 app[web.1]: /app/.heroku/python/lib/python3.8/site-packages/gnewsclient/gnewsclient.py:63: SyntaxWarning: "is" with a literal. Did you mean "=="?
+2020-07-20T06:50:49.695776+00:00 app[web.1]: if self.topic is None or self.topic is 'Top Stories':
+2020-07-20T06:50:50.101035+00:00 app[web.1]: sys:1: TelegramDeprecationWarning: Old Handler API is deprecated - see https://git.io/fxJuV for details
+2020-07-20T06:50:50.102357+00:00 app[web.1]: * Serving Flask app "app" (lazy loading)
+2020-07-20T06:50:50.102440+00:00 app[web.1]: * Environment: production
+2020-07-20T06:50:50.102861+00:00 app[web.1]: WARNING: This is a development server. Do not use it in a production deployment.
+2020-07-20T06:50:50.102940+00:00 app[web.1]: Use a production WSGI server instead.
+2020-07-20T06:50:50.103044+00:00 app[web.1]: * Debug mode: off
+2020-07-20T06:50:50.103966+00:00 app[web.1]: --- Logging error ---
+2020-07-20T06:50:50.105358+00:00 app[web.1]: Traceback (most recent call last):
+2020-07-20T06:50:50.105415+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.8/logging/__init__.py", line 436, in format
+2020-07-20T06:50:50.105416+00:00 app[web.1]: return self._format(record)
+2020-07-20T06:50:50.105486+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.8/logging/__init__.py", line 432, in _format
+2020-07-20T06:50:50.105487+00:00 app[web.1]: return self._fmt % record.__dict__
+2020-07-20T06:50:50.105531+00:00 app[web.1]: KeyError: 'leveltime'
+2020-07-20T06:50:50.105566+00:00 app[web.1]:
+2020-07-20T06:50:50.105568+00:00 app[web.1]: During handling of the above exception, another exception occurred:
+2020-07-20T06:50:50.105568+00:00 app[web.1]:
+2020-07-20T06:50:50.105595+00:00 app[web.1]: Traceback (most recent call last):
+2020-07-20T06:50:50.105695+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.8/logging/__init__.py", line 1081, in emit
+2020-07-20T06:50:50.105696+00:00 app[web.1]: msg = self.format(record)
+2020-07-20T06:50:50.105723+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.8/logging/__init__.py", line 925, in format
+2020-07-20T06:50:50.105724+00:00 app[web.1]: return fmt.format(record)
+2020-07-20T06:50:50.105752+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.8/logging/__init__.py", line 667, in format
+2020-07-20T06:50:50.105752+00:00 app[web.1]: s = self.formatMessage(record)
+2020-07-20T06:50:50.105777+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.8/logging/__init__.py", line 636, in formatMessage
+2020-07-20T06:50:50.105794+00:00 app[web.1]: return self._style.format(record)
+2020-07-20T06:50:50.105847+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.8/logging/__init__.py", line 438, in format
+2020-07-20T06:50:50.105848+00:00 app[web.1]: raise ValueError('Formatting field not found in record: %s' % e)
+2020-07-20T06:50:50.105893+00:00 app[web.1]: ValueError: Formatting field not found in record: 'leveltime'
+2020-07-20T06:50:50.105928+00:00 app[web.1]: Call stack:
+2020-07-20T06:50:50.108881+00:00 app[web.1]: File "app.py", line 76, in <module>
+2020-07-20T06:50:50.108881+00:00 app[web.1]: app.run(port=8443)
+2020-07-20T06:50:50.108914+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.8/site-packages/flask/app.py", line 990, in run
+2020-07-20T06:50:50.108914+00:00 app[web.1]: run_simple(host, port, self, **options)
+2020-07-20T06:50:50.108944+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.8/site-packages/werkzeug/serving.py", line 1052, in run_simple
+2020-07-20T06:50:50.108944+00:00 app[web.1]: inner()
+2020-07-20T06:50:50.109103+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.8/site-packages/werkzeug/serving.py", line 1008, in inner
+2020-07-20T06:50:50.109104+00:00 app[web.1]: log_startup(srv.socket)
+2020-07-20T06:50:50.109105+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.8/site-packages/werkzeug/serving.py", line 982, in log_startup
+2020-07-20T06:50:50.109105+00:00 app[web.1]: _log(
+2020-07-20T06:50:50.109109+00:00 app[web.1]: File "/app/.heroku/python/lib/python3.8/site-packages/werkzeug/_internal.py", line 113, in _log
+2020-07-20T06:50:50.109110+00:00 app[web.1]: getattr(_logger, type)(message.rstrip(), *args, **kwargs)
+2020-07-20T06:50:50.109171+00:00 app[web.1]: Message: ' * Running on %s://%s:%d/ %s'
+2020-07-20T06:50:50.109172+00:00 app[web.1]: Arguments: ('http', '127.0.0.1', 8443, '(Press CTRL+C to quit)')
+2020-07-20T06:51:11.967717+00:00 heroku[router]: at=error code=H20 desc="App boot timeout" method=GET path="/" host=cryptic-citadel-43420.herokuapp.com request_id=ea1a33ec-884f-4948-81ac-c0011b2c1b2f fwd="125.99.200.76" dyno= connect= service= status=503 bytes= protocol=https
+2020-07-20T06:51:45.459195+00:00 heroku[web.1]: Error R10 (Boot timeout) -> Web process failed to bind to $PORT within 60 seconds of launch
+2020-07-20T06:51:45.477007+00:00 heroku[web.1]: Stopping process with SIGKILL
+2020-07-20T06:51:45.573696+00:00 heroku[web.1]: Process exited with status 137
+2020-07-20T06:51:45.638962+00:00 heroku[web.1]: State changed from starting to crashed
+2020-07-20T06:51:47.173700+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=cryptic-citadel-43420.herokuapp.com request_id=014c13fa-c0b6-4124-bd1a-e1f52a3d5cf0 fwd="125.99.200.76" dyno= connect= service= status=503 bytes= protocol=https
+2020-07-20T06:51:47.412361+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=cryptic-citadel-43420.herokuapp.com request_id=91f495ee-ef37-469b-9075-b8eb43de71ff fwd="125.99.200.76" dyno= connect= service= status=503 bytes= protocol=https
+2020-07-20T06:51:49.216554+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=cryptic-citadel-43420.herokuapp.com request_id=ca8b598d-8692-4864-8b85-d70834ab204d fwd="125.99.200.76" dyno= connect= service= status=503 bytes= protocol=https
+2020-07-20T06:51:50.811801+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=cryptic-citadel-43420.herokuapp.com request_id=1e68fab8-f9fe-4b9b-8763-f35380a034ab fwd="125.99.200.76" dyno= connect= service= status=503 bytes= protocol=https
+2020-07-20T06:51:51.209022+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=cryptic-citadel-43420.herokuapp.com request_id=8231f75d-68d1-4b9a-b93d-aed7a8607fa6 fwd="125.99.200.76" dyno= connect= service= status=503 bytes= protocol=https
+2020-07-20T06:51:52.198221+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=cryptic-citadel-43420.herokuapp.com request_id=aa736900-1131-441f-aba9-00eb97fc87bc fwd="125.99.200.76" dyno= connect= service= status=503 bytes= protocol=https
+2020-07-20T06:52:00.989895+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=cryptic-citadel-43420.herokuapp.com request_id=93d7c516-7a5d-4dae-8990-b3ab7806e625 fwd="125.99.200.76" dyno= connect= service= status=503 bytes= protocol=https
+2020-07-20T06:52:07.733257+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=cryptic-citadel-43420.herokuapp.com request_id=0b3509d5-0408-4312-8619-d887c2e1a3db fwd="125.99.200.76" dyno= connect= service= status=503 bytes= protocol=https
+2020-07-20T06:52:09.520916+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=cryptic-citadel-43420.herokuapp.com request_id=96e0da5d-06ae-44bb-b466-f0123e565ed1 fwd="125.99.200.76" dyno= connect= service= status=503 bytes= protocol=https
+2020-07-20T07:03:01.249790+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=cryptic-citadel-43420.herokuapp.com request_id=8ced8f89-4f67-469d-b159-29980a9a0a86 fwd="125.99.200.76" dyno= connect= service= status=503 bytes= protocol=http
+2020-07-20T07:03:02.626128+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=cryptic-citadel-43420.herokuapp.com request_id=27d490f9-ab27-4044-b660-c78d4bffa75b fwd="125.99.200.76" dyno= connect= service= status=503 bytes= protocol=http
+2020-07-20T07:03:53.172475+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=cryptic-citadel-43420.herokuapp.com request_id=f0ef24f8-6314-47fd-bfd4-f3a0abc34c25 fwd="159.65.145.255" dyno= connect= service= status=503 bytes= protocol=http
+2020-07-20T07:04:40.685964+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/robots.txt" host=cryptic-citadel-43420.herokuapp.com request_id=534ccdfc-ea90-49cd-9463-c9633e173759 fwd="139.167.68.6" dyno= connect= service= status=503 bytes= protocol=http
+2020-07-20T07:04:41.348011+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/" host=cryptic-citadel-43420.herokuapp.com request_id=7ed5a4da-6ec9-457b-b36f-bfac08038966 fwd="139.167.68.6" dyno= connect= service= status=503 bytes= protocol=https
+2020-07-20T07:04:42.356149+00:00 heroku[router]: at=error code=H10 desc="App crashed" method=GET path="/favicon.ico" host=cryptic-citadel-43420.herokuapp.com request_id=d146f4c2-9341-491a-90cc-bcd82c8b6e70 fwd="139.167.68.6" dyno= connect= service= status=503 bytes= protocol=https
